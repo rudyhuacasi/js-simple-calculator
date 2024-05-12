@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.calculator {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    width: 300px;
+    background: linear-gradient(270deg, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%);}
+
+#logo {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#result {
+    color: #09d297;
+    background-color: #000;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: right;
+    height: 80px;
+    line-height: 80px;
+    font-family: 'Seven Segment', sans-serif;
+    font-size: 40px;
+    overflow: hidden;
+}
+
+.buttons {
+    display: flex;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 6px 10px;
+    font-size: 20px;
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    background-color: #bbb;
+    border: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 2px solid #888;
+    border-left: 2px solid #888;
+}
+
+button:active {
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-color: #888;
+    border-right-color: #888;
+    /* il margin-top serve per evitare che on hover il pulsante si sposti */
+    margin-top:2px;
+}
+
+.numbers {
+    flex: 4;
+}
+
+.operators {
+    flex: 1;
+}
+
+.numbers button {
+    flex-basis: calc(33% - 10px);
+}
+
+.numbers button.large {
+    flex-basis: calc(66% - 10px);
+}
+
+.operators button {
+    background-color: #77A8B0;
+    color: white;
+}
+
+button.orange {
+    background: #ff9f0a;
+    color: white;
+}
